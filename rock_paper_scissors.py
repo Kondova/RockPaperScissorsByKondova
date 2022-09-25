@@ -1,4 +1,17 @@
-import  random
+import random
+
+
+def prCyan(skk): print("\033[96m {}\033[00m" .format(skk))
+
+
+def prYellow(skk): print("\033[93m {}\033[00m" .format(skk))
+
+
+def prRed(skk): print("\033[91m {}\033[00m" .format(skk))
+
+
+def prGreen(skk): print("\033[92m {}\033[00m" .format(skk))
+
 
 rock = "Rock"
 paper = 'Paper'
@@ -25,13 +38,13 @@ elif computer_random_number == 2:
 else:
     computer_move = scissors
 
-print(f"The computer chose {computer_move}.")
+prCyan(f"The computer chose {computer_move}.")
 
 if (player_move == rock and computer_move == scissors) or \
         (player_move == paper and computer_move == rock) or \
         (player_move == scissors and computer_move == paper):
-    print("You win!")
+    prGreen("You win!")
 elif player_move == computer_move:
-    print("Draw!")
+    prYellow("Draw!")
 else:
-    print("You lose!")
+    prRed("You lose!")
